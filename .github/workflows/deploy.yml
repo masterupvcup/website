@@ -14,7 +14,8 @@ jobs:
     steps:
     - uses: actions/checkout@v3
       with:
-        fetch-depth: 0  # Ensures the entire git history is checked out
+        fetch-depth: 0
+        persist-credentials: false 
     
     - name: Setup Git identity
       run: |
@@ -31,6 +32,9 @@ jobs:
 
     - name: Install dependencies
       run: pnpm install
+    
+    - name: Add GitHub Token for Authentication
+      run: git remote set-url origin https://${{ secrets.GH_TOKEN }}@github.com/masterupvcup/website.git
 
     - name: Deploy
       run: pnpm run deploy
