@@ -19,6 +19,12 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
+      - name: Setup Git identity
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
+
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
@@ -36,7 +42,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      # - run: npx nuxt build --preset github_pages
+      - run: npx nuxt build --preset github_pages
 
       # - name: Upload artifact
       #   uses: actions/upload-pages-artifact@v1
@@ -47,11 +53,7 @@ jobs:
       #   with:
       #     fetch-depth: 0
     
-      - name: Setup Git identity
-        run: |
-          git config --local user.email "masterupvcup@gmail.com"
-          git config --local user.name "Master upv cup"
-
+      
       # - name: Deploy to GitHub Pages
       #   id: deployment
       #   uses: actions/deploy-pages@v1
@@ -60,9 +62,4 @@ jobs:
     #   run: git remote set-url origin https://${{ secrets.GITHUB_TOKEN }}@github.com/masterupvcup/website.git
 
       - name: Deploy
-        run: pnpm run deploy
-        # run: npx gh-pages --dotfiles -d .output/public -u "GitHub Actions <actions@github.com>" --repo https://${{ secrets.GITHUB_TOKEN }}@github.com/masterupvcup/website.git
-        # env:
-          # Set any environment variables needed for deployment
-          # For example:
-          # MY_SECRET: ${{ secrets.MY_SECRET }}
+        run: npx gh-pages --dotfiles -d .output/public
