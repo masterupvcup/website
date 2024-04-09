@@ -19,15 +19,13 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      - name: Setup Git identity
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
-
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
 
       - run: corepack enable
 
