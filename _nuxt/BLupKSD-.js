@@ -1,1 +1,0 @@
-import{_ as e,v as t,t as s,x as c}from"./DPn2Qw9J.js";const n={},o=c("h1",null,"Nuxt3 x GitHup Pages",-1),_=[o];function a(r,d){return s(),t("div",null,_)}const l=e(n,[["render",a]]);export{l as default};
