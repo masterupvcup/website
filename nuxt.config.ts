@@ -1,27 +1,38 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  extends: ['./layers/ui-pro'],
+
+  modules: [
+    '@nuxt/content',
+    '@nuxt/ui',
+    '@nuxt/fonts'
+  ],
+
   devtools: { enabled: true },
+
+  typescript: {
+    strict: false
+  },
+
   ssr: false,
+
   app: {
-    head: {
-      title: 'Nuxt3 x GitHub Pages',
-      meta: [
-        { charset: 'utf-8' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { hid: 'description', name: 'description', content: 'Dario Tecchia\' personal website!' },
-        { name: 'format-detection', content: 'telephone=no' }
-      ],
-      link: [
-        { rel: 'icon', type: 'image/svg', href: '/favicon.svg' }
-      ]
-    },
+    // head: {
+    //   title: 'Nuxt3 x GitHub Pages',
+    //   meta: [
+    //     { charset: 'utf-8' },
+    //     { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+    //     { hid: 'description', name: 'description', content: 'Dario Tecchia\' personal website!' },
+    //     { name: 'format-detection', content: 'telephone=no' }
+    //   ],
+    //   link: [
+    //     { rel: 'icon', type: 'image/svg', href: '/favicon.svg' }
+    //   ]
+    // },
     baseURL: '/'
   },
-  modules: [
-  ],
-  css: [
-    "bootstrap/dist/css/bootstrap.min.css",
-    "bootstrap-vue-3/dist/bootstrap-vue-3.css",
-    '@/assets/style/main.scss',
-  ]
+
+  ui: {
+    icons: ['heroicons', 'simple-icons']
+  },
 })
