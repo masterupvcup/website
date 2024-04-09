@@ -12,6 +12,15 @@ useSeoMeta({
 <template>
   <div>
     <ULandingHero :title="page.hero.title" :description="page.hero.description" :links="page.hero.links">
+      <template #top>
+        <div :style="{
+          width: '25rem',
+          margin: '-9rem auto 1rem'
+        }">
+        <img :src="page.hero.image" alt="Master UPV Cup" />
+        </div>
+      </template>
+
       <template #headline>
         <UBadge v-if="page.hero.headline" variant="subtle" size="lg" class="relative rounded-full font-semibold">
           <NuxtLink :to="page.hero.headline.to" target="_blank" class="focus:outline-none" tabindex="-1">

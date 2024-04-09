@@ -12,8 +12,8 @@ useHead({
 })
 
 useSeoMeta({
-  ogImage: 'https://landing-template.nuxt.dev/social-card.png',
-  twitterImage: 'https://landing-template.nuxt.dev/social-card.png',
+  ogImage: 'https://masterupvcup.es/social-card.png',
+  twitterImage: 'https://masterupvcup.es/social-card.png',
   twitterCard: 'summary_large_image'
 })
 </script>
