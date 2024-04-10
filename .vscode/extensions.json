@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "bradlc.vscode-tailwindcss",
+    "dbaeumer.vscode-eslint",
+    "cpreston321.nuxt-vscode",
+    "antfu.iconify",
+    "antfu.goto-alias",
+    "antfu.vite",
+    "naumovs.color-highlight",
+    "Nuxt.mdc"
+  ]
+}

@@ -2,7 +2,8 @@
   <div class="relative">
     <div class="bg-background border-gradient rounded-xl p-4">
       <div class="aspect-w-16 aspect-h-9 rounded-lg relative overflow-hidden border border-dashed border-gray-950/10 dark:border-white/10">
-        <svg class="absolute inset-0 h-full w-full stroke-gray-950/10 dark:stroke-white/10" fill="none">
+        <img :src="image" class="object-cover absolute inset-0 h-full w-full" />
+        <!-- <svg class="absolute inset-0 h-full w-full stroke-gray-950/10 dark:stroke-white/10" fill="none">
           <defs>
             <pattern
               id="pattern-5c1e4f0e-62d5-498b-8ff0-cf77bb448c8e"
@@ -16,11 +17,18 @@
             </pattern>
           </defs>
           <rect stroke="none" fill="url(#pattern-5c1e4f0e-62d5-498b-8ff0-cf77bb448c8e)" width="100%" height="100%" />
-        </svg>
+        </svg> -->
       </div>
     </div>
   </div>
 </template>
+
+<script setup>
+  defineProps({
+    image: String
+  });
+</script>
+
 
 <style scoped>
 .border-gradient:after {

@@ -55,7 +55,7 @@ function onSubmit () {
 
 <template>
   <UFooter>
-    <template #top>
+    <!-- <template #top>
       <UFooterColumns :links="links">
         <template #right>
           <form @submit.prevent="onSubmit">
@@ -69,18 +69,18 @@ function onSubmit () {
           </form>
         </template>
       </UFooterColumns>
-    </template>
+    </template> -->
 
     <template #left>
       <p class="text-gray-500 dark:text-gray-400 text-sm">
-        Copyright © {{ new Date().getFullYear() }}. All rights reserved.
+        Copyright © {{ new Date().getFullYear() }}. Todos los derechos reservados.
       </p>
     </template>
 
     <template #right>
       <UColorModeButton size="sm" />
 
-      <UButton to="https://github.com/nuxt-ui-pro/landing" target="_blank" icon="i-simple-icons-github" aria-label="GitHub" color="gray" variant="ghost" />
+      <UButton to="https://www.instagram.com/masterupvcup" target="_blank" icon="i-simple-icons-instagram" aria-label="Instagram" color="gray" variant="ghost" />
     </template>
   </UFooter>
 </template>

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+// await useAsyncData(() => queryContent('/').findOne())
 const { data: page } = await useAsyncData('index', () => queryContent('/').findOne())
 
 useSeoMeta({
@@ -33,11 +34,12 @@ useSeoMeta({
         </UBadge>
       </template>
 
-      <Placeholder />
+      <Hero :image="page.hero.mainImage" />
 
-      <ULandingLogos :title="page.logos.title" align="center">
-        <UIcon v-for="icon in page.logos.icons" :key="icon" :name="icon" class="w-12 h-12 lg:w-16 lg:h-16 flex-shrink-0 text-gray-900 dark:text-white" />
+      <ULandingLogos :title="page.logos.title" align="center" class="align-middle items-center" >
+        <a v-for="(logo, index) in page.logos.logos" :key="index" :class="[logo.class || 'w-24 lg:w-28']" class="flex-shrink-0" :href="logo.link" target="_blank"><img :src="logo.image" :style="{width:'100%'}" :alt="logo.title" /></a>
       </ULandingLogos>
+      <div class="flex items-center align-middle p-6 pt-0 justify-center"><UButton :to="page.logos.details.link" target="_blank" color="primary">{{ page.logos.details.title }}</UButton></div>
     </ULandingHero>
 
     <ULandingSection :title="page.features.title" :description="page.features.description" :headline="page.features.headline">
@@ -46,23 +48,23 @@ useSeoMeta({
       </UPageGrid>
     </ULandingSection>
 
-    <ULandingSection :title="page.pricing.title" :description="page.pricing.description" :headline="page.pricing.headline">
+    <!-- <ULandingSection :title="page.pricing.title" :description="page.pricing.description" :headline="page.pricing.headline">
       <UPricingGrid id="pricing" compact class="scroll-mt-[calc(var(--header-height)+140px+128px+96px)]">
         <UPricingCard v-for="(plan, index) in page.pricing.plans" :key="index" v-bind="plan" />
       </UPricingGrid>
-    </ULandingSection>
+    </ULandingSection> -->
 
-    <ULandingSection :headline="page.testimonials.headline" :title="page.testimonials.title" :description="page.testimonials.description">
+    <!-- <ULandingSection :headline="page.testimonials.headline" :title="page.testimonials.title" :description="page.testimonials.description">
       <UPageColumns id="testimonials" class="xl:columns-4 scroll-mt-[calc(var(--header-height)+140px+128px+96px)]">
         <div v-for="(testimonial, index) in page.testimonials.items" :key="index" class="break-inside-avoid">
           <ULandingTestimonial v-bind="testimonial" />
         </div>
       </UPageColumns>
-    </ULandingSection>
+    </ULandingSection> -->
 
-    <ULandingSection class="bg-primary-50 dark:bg-primary-400 dark:bg-opacity-10">
+    <!-- <ULandingSection class="bg-primary-50 dark:bg-primary-400 dark:bg-opacity-10">
       <ULandingCTA v-bind="page.cta" :card="false" />
-    </ULandingSection>
+    </ULandingSection> -->
 
     <ULandingSection id="faq" :title="page.faq.title" :description="page.faq.description" class="scroll-mt-[var(--header-height)]">
       <ULandingFAQ

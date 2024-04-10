@@ -1,0 +1,15 @@
+{
+  "configurations": [
+    {
+      "name": "Debug app",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": ["run", "dev"],
+      "console": "integratedTerminal"
+    }
+  ],
+
+  "version": "0.2.0"
+}
