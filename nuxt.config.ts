@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   extends: ["./layers/ui-pro"],
 
-  modules: ["@nuxt/content", "@nuxt/ui", "@nuxt/fonts"],
+  modules: ["@nuxt/content", "@nuxt/ui", "@nuxt/fonts", "nuxt-musicfyplayer"],
 
   devtools: { enabled: true },
 

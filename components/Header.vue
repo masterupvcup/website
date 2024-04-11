@@ -7,7 +7,12 @@ const links = computed(() => [{
   to: '#features',
   icon: 'i-mdi-star-circle-outline',
   active: activeHeadings.value.includes('features') && !activeHeadings.value.includes('pricing')
-// }, {
+}, {
+  label: 'Equipos',
+  to: '#teams',
+  icon: 'i-mdi-flag',
+  active: activeHeadings.value.includes('teams') && !activeHeadings.value.includes('teams')
+// }
 //   label: 'Pricing',
 //   to: '#pricing',
 //   icon: 'i-heroicons-credit-card',
@@ -27,6 +32,7 @@ const links = computed(() => [{
 nuxtApp.hooks.hookOnce('page:finish', () => {
   updateHeadings([
     document.querySelector('#features'),
+    document.querySelector('#teams'),
     document.querySelector('#pricing'),
     document.querySelector('#testimonials'),
     document.querySelector('#faq')
