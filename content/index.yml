@@ -1,12 +1,12 @@
-title: I Master UPV Cup 2024
-description: Primera edición del torneo de waterpolo Master UPV Cup 2024.
+title: II Master UPV Cup 2025
+description: Segunda edición del torneo de waterpolo Master UPV Cup 2025.
 hero:
-  title: Master UPV Cup 2024
-  description: Bienvenidos a la Primera Edición del Torneo Master UPV Cup 2024
+  title: Master UPV Cup 2025
+  description: Bienvenidos a la Segunda Edición del Torneo Master UPV Cup 2025
   image: /logo.png
   headline:
-    label: 4 Mayo 2024, de 15:00 a 20:00
-    to: https://calendar.google.com/calendar/u/0/r/eventedit?dates=20240504T130000Z/20240504T180000Z&details=Info:+https://masterupvcup.es&location=Piscina%20UPV%2C%20Av.%20de%20los%20Naranjos%2C%20M%2C%20Algir%C3%B3s%2C%2046022%20Valencia%2C%20Espa%C3%B1a&text=I+Master+UPV+Cup+2024
+    label: 2 - 3 Mayo 2025, de 15:00 a 20:00
+    to: https://calendar.google.com/calendar/u/0/r/eventedit?dates=20250502T130000Z/20250503T180000Z&details=Info:+https://masterupvcup.es&location=Piscina%20UPV%2C%20Av.%20de%20los%20Naranjos%2C%20M%2C%20Algir%C3%B3s%2C%2046022%20Valencia%2C%20Espa%C3%B1a&text=II+Master+UPV+Cup+2025
     icon: i-mdi-calendar-plus
   links:
     - label: Descubre más
@@ -14,11 +14,11 @@ hero:
       trailing: true
       to: '#features'
       size: xl
-    - label: Inscribe a tu equipo (Cerrado)
+    - label: Inscribe a tu equipo
       icon: i-mdi-star-four-points
       size: xl
       color: gray
-      to:
+      to: https://tally.so/r/3X1VoV
       target: _blank
   mainImage: /hero.jpg
 logos:
@@ -70,7 +70,7 @@ features:
       icon: i-mdi-gift
 teams:
   title: Equipos participantes
-  description: Conoce a los equipos que participarán en la I Master UPV Cup 2024
+  description: Conoce a los equipos que participarán en la I Master UPV Cup 2025
   logos:
     - title: Club Waterpolo UPV
       image: /teams/waterpolo_upv_logo.png
@@ -194,12 +194,12 @@ cta:
       size: xl
 player:
   headline: Recursos
-  title: Canción oficial del Master UPV Cup 2024
-  description: Escucha la canción oficial del Master UPV Cup 2024, "Underdogs Unleashed", y prepárate para la competición.
+  title: Canción oficial del Master UPV Cup 2025
+  description: Escucha la canción oficial del Master UPV Cup 2025, "Underdogs Unleashed", y prepárate para la competición.
   player:
     src: /official_song.mp3
     image: /official_song_cover.webp
-    alt: Underdogs Unleashed - Official Master UPV Cup 2024 Song
+    alt: Underdogs Unleashed - Official Master UPV Cup 2025 Song
 faq:
   title: Preguntas frecuentes
   description: ¿Tienes alguna pregunta? Encuentra respuestas aquí.

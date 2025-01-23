@@ -43,7 +43,7 @@ nuxtApp.hooks.hookOnce('page:finish', () => {
 <template>
   <UHeader :links="links">
     <template #logo>
-      Master UPV Cup <UBadge label="1º Edición" variant="subtle" class="mb-0.5" />
+      Master UPV Cup <UBadge label="2º Edición" variant="subtle" class="mb-0.5" />
     </template>
 
     <!-- <template #right>

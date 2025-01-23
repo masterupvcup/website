@@ -49,7 +49,7 @@ useSeoMeta({
       </UPageGrid>
     </ULandingSection>
 
-    <ULandingSection
+    <!-- <ULandingSection
     class="bg-primary/10 dark:bg-primary-400 dark:bg-opacity-20"
      :title="page.teams.title" :description="page.teams.description">
       <ULandingLogos id="teams" align="center" class="align-middle items-center" >
@@ -60,7 +60,7 @@ useSeoMeta({
           </div>
         </a>
       </ULandingLogos>
-    </ULandingSection>
+    </ULandingSection> -->
 
     <!-- <ULandingSection :title="page.pricing.title" :description="page.pricing.description" :headline="page.pricing.headline">
       <UPricingGrid id="pricing" compact class="scroll-mt-[calc(var(--header-height)+140px+128px+96px)]">
